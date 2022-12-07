@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="comic" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cb8a1fea-d700-40b1-a4b9-4420d2b2125d">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="comicAntonio"/>
+	<parameter name="estado" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from numeros where estado LIKE $P{estado}]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<field name="titulo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="titulo"/>
+		<property name="com.jaspersoft.studio.field.label" value="titulo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<field name="portada" class="java.io.InputStream">
+		<property name="com.jaspersoft.studio.field.name" value="portada"/>
+		<property name="com.jaspersoft.studio.field.label" value="portada"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="colecciones"/>
+	</field>
+	<field name="sinopsis" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sinopsis"/>
+		<property name="com.jaspersoft.studio.field.label" value="sinopsis"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<field name="precio" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="precio"/>
+		<property name="com.jaspersoft.studio.field.label" value="precio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="estado"/>
+		<property name="com.jaspersoft.studio.field.label" value="estado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<field name="fecha_publicacion" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha_publicacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha_publicacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<field name="id_colecc" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_colecc"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_colecc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="titulo">
+		<groupExpression><![CDATA[$F{titulo}]]></groupExpression>
+	</group>
+	<group name="portada">
+		<groupExpression><![CDATA[$F{portada}]]></groupExpression>
+	</group>
+	<group name="sinopsis">
+		<groupExpression><![CDATA[$F{sinopsis}]]></groupExpression>
+	</group>
+	<group name="precio">
+		<groupExpression><![CDATA[$F{precio}]]></groupExpression>
+	</group>
+	<group name="estado">
+		<groupExpression><![CDATA[$F{estado}]]></groupExpression>
+	</group>
+	<group name="fecha_publicacion">
+		<groupExpression><![CDATA[$F{fecha_publicacion}]]></groupExpression>
+	</group>
+	<group name="id_colecc">
+		<groupExpression><![CDATA[$F{id_colecc}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="190" y="50" width="100" height="21" uuid="0cfff762-fb20-45c7-bfb6-2ac985b9d133"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Comics en estado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="10" width="311" height="30" uuid="51fa6256-4f38-4324-a36a-634aaa2b6dd6"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Cómics ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="50" width="80" height="21" uuid="e5936c10-d7bc-4511-8fbb-3433220f4b1b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{estado}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="448" y="70" width="100" height="30" uuid="43e2cc87-97a5-4328-9338-979611dc39d5"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="450" y="50" width="100" height="30" uuid="d92391fd-73e3-4620-aa9a-4b6d71dbad20"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-9" y="13" width="99" height="17" uuid="262722aa-bf3a-440c-808f-98fca5ab2f41"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Antonio Vila Portela]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="1" width="185" height="30" uuid="12f3a4ee-4cf6-4cff-a8b3-6675be78b3b0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7be5dda3-44ee-4ace-9cc1-bb5b96bf28c1"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Titulo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="30" uuid="3ae4f3a5-300d-4f3c-9a90-a0a2d4565514">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c7aed553-4b49-47bb-a2de-cd0b155c2ac7"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="170" y="1" width="185" height="30" uuid="13b5637c-792e-4fe8-b33e-c482109a911b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7be5dda3-44ee-4ace-9cc1-bb5b96bf28c1"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{titulo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="30" uuid="f9302e27-2553-428d-be6f-ac813d175e5c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c7aed553-4b49-47bb-a2de-cd0b155c2ac7"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="69" splitType="Stretch">
+			<textField>
+				<reportElement x="290" y="19" width="30" height="30" uuid="ab6900b0-2a6e-4fb2-b99b-0915482f07fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="220" y="19" width="70" height="30" uuid="9aac4bf4-c121-4ca9-807e-c81322e430a1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[Página ]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="informes/" kind="src" path="src"/>
+	<classpathentry kind="src" path="informes"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-16">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/tonov_zltu0i9/Downloads/jasperreports-5.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tonov_zltu0i9/eclipse-workspace/proyectoAntonioVp-server/javahelp-2.0.05.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tonov_zltu0i9/eclipse-workspace/proyectoAntonioVp-server/mysql-connector-j-8.0.31.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tonov_zltu0i9/OneDrive/Escritorio/ANTONIO VILA/librerias/commons-javaflow-1209105.jar/commons-javaflow-1209105.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tonov_zltu0i9/OneDrive/Escritorio/ANTONIO VILA/librerias/com.lowagie.text-2.1.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tonov_zltu0i9/OneDrive/Escritorio/ANTONIO VILA/librerias/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tonov_zltu0i9/OneDrive/Escritorio/ANTONIO VILA/librerias/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tonov_zltu0i9/OneDrive/Escritorio/ANTONIO VILA/librerias/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tonov_zltu0i9/OneDrive/Escritorio/ANTONIO VILA/librerias/commons-logging-1.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="estado" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="42fe074b-071f-4688-b6b0-d23df953b577">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[Y29taWNzX2FudG9uaW8ubnVtZXJvcyBBUyAsNjgsMTYsNDExYmE4NmQtN2QxMS00Yzk0LWIzZDQt
+OGU5OTgwODk5OGE1Ow==]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="comicAntonio"/>
+	<parameter name="LoggedInUser" class="com.jaspersoft.jasperserver.api.metadata.user.domain.client.UserImpl" isForPrompting="false">
+		<parameterDescription><![CDATA[Not usable in query input control, but is used as parameter to report]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new com.jaspersoft.jasperserver.api.metadata.user.domain.client.UserImpl()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LoggedInUsername" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[Of logged in user]]></parameterDescription>
+		<defaultValueExpression><![CDATA["joeuser"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LoggedInUserFullName" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[Of logged in user]]></parameterDescription>
+		<defaultValueExpression><![CDATA["Joe Smith"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LoggedInUserEmailAddress" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[Of logged in user]]></parameterDescription>
+		<defaultValueExpression><![CDATA["joe@some.email"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LoggedInUserEnabled" class="java.lang.Boolean" isForPrompting="false">
+		<parameterDescription><![CDATA[Is logged in user enabled?]]></parameterDescription>
+		<defaultValueExpression><![CDATA[Boolean.TRUE]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LoggedInUserExternallyDefined" class="java.lang.Boolean" isForPrompting="false">
+		<parameterDescription><![CDATA[Is logged in user externally defined? ie. authenticated externally]]></parameterDescription>
+		<defaultValueExpression><![CDATA[Boolean.FALSE]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LoggedInUserTenantId" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[Of logged in user. Only relevant in Pro/Enterprise.]]></parameterDescription>
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LoggedInUserRoles" class="java.util.Collection" nestedType="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[Current set of roles of logged in user. Useful for $X parameter]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new ArrayList()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LoggedInUserAttributes" class="java.util.Map" nestedType="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[Not usable in query input control, but is used as parameter to report. Empty map if no attributes]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new HashMap()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LoggedInUserAttributeNames" class="java.util.Collection" nestedType="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[User profile attribute names. Useful for $X parameters. Empty collection if no attributes]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new ArrayList()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LoggedInUserAttributeValues" class="java.util.Collection" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new ArrayList()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Estado" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * from numeros where estado like $P{Estado}]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<field name="titulo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="titulo"/>
+		<property name="com.jaspersoft.studio.field.label" value="titulo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<field name="portada" class="byte[]">
+		<property name="com.jaspersoft.studio.field.name" value="portada"/>
+		<property name="com.jaspersoft.studio.field.label" value="portada"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="estado"/>
+		<property name="com.jaspersoft.studio.field.label" value="estado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<field name="fecha_publicacion" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha_publicacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha_publicacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<field name="sinopsis" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sinopsis"/>
+		<property name="com.jaspersoft.studio.field.label" value="sinopsis"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<field name="precio" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="precio"/>
+		<property name="com.jaspersoft.studio.field.label" value="precio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="numeros"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="227" y="30" width="100" height="30" uuid="3ca30dfa-66ea-42e6-89db-01489482e524"/>
+				<textFieldExpression><![CDATA[$P{Estado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="49" y="0" width="100" height="30" uuid="4a820f92-8bfc-4ec6-bb89-9ae89c9cb8ae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="044e2be8-aa97-47d4-bc2c-63402f9de721"/>
+				</reportElement>
+				<text><![CDATA[titulo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="10" width="100" height="30" uuid="3c15f4a1-48b5-4c4d-a17e-3c186fc09bd1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cc7d09c4-67b6-4232-ba6f-a6ea3e0c57b5"/>
+				</reportElement>
+				<text><![CDATA[precio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="49" y="74" width="100" height="30" uuid="976ae994-82a8-4cfa-8062-19c609daee53">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="044e2be8-aa97-47d4-bc2c-63402f9de721"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{titulo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="70" width="100" height="30" uuid="1b9c021e-494c-4f76-a829-1be41addc0e4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cc7d09c4-67b6-4232-ba6f-a6ea3e0c57b5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
