@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<index version="1.0">
+   <indexitem text="Inicio" target="inicio">
+	   <indexitem text="Configuración principal" target="config_conexion"/>
+	   <indexitem text="Menu Principal" target="menu_principal">
+	   			<indexitem text="Collecions" target="gestion_colecciones">
+	   				<indexitem text="Crear Coleccion" target="crear_coleccion"></indexitem>
+	   				<indexitem text="Editar Colleccion" target="modificar_coleccion"></indexitem>
+	   			</indexitem>
+	   			<indexitem text="Cómics" target="comics">
+	   				<indexitem text="Crear Cómic" target="crear_comic"></indexitem>
+	   				<indexitem text="Editar Cómic" target="modificar_comic"></indexitem>
+	   			</indexitem>
+	   			
+	   			<indexitem text ="Informes" target="informes"></indexitem>
+	   </indexitem>	
+   </indexitem>
+</index>

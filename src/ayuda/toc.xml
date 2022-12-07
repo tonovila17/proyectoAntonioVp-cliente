@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<toc version="1.0">
+   <tocitem text="Inicio" target="inicio">
+      <tocitem text="Configuración Conexión" target="config_conexion"/>
+      <tocitem text="Menú Principal" target="menu_principal">
+			<tocitem text="Colecciones" target="gestion_colecciones">
+				<tocitem text="Crear Colección" target="crear_coleccion"> </tocitem>
+				<tocitem text="Modificar Colección" target="modificar_coleccion"> </tocitem>
+			</tocitem>
+			<tocitem text="Cómics" target="comics">
+				<tocitem text="Crear Cómic" target="crear_comic" />
+				<tocitem text="Modificar Cómic" target="modificar_comic" />	
+			</tocitem>
+			
+			<tocitem text="Informes" target="informes" />
+			
+	  </tocitem>
+   </tocitem>
+</toc>
